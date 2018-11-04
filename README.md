@@ -29,7 +29,7 @@ If you want to test the site as well
 
 First clone it and then run it in the terminal
 
-git clone 'site.adress'
+git clone git@github.com:Schwengsbier/website.git
 
 bundle install
 
