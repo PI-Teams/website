@@ -55,7 +55,7 @@ gem 'rails-i18n', '~> 5.0.0'
 gem 'http-accept'
 gem 'http_accept_language'
 gem 'tether-rails'
-
+gem "sprockets", ">= 3.7.2"
 
 
 gem 'hirb'
