@@ -1,0 +1,7 @@
+<p>Hallo <%= @resource.email %>!</p>
+
+<p>Ihr Konto wurde aufgrund einer übermäßigen Anzahl erfolgloser Anmeldeversuche gesperrt.</p>
+
+<p>Klicken Sie auf den untenstehenden Link, um Ihr Konto freizuschalten:</p>
+
+<p><%= link_to 'Konto freischalten', unlock_url(@resource, unlock_token: @token) %></p>

@@ -1,0 +1,5 @@
+de:
+  gflash:
+   errors:
+    messages:
+      extension_whitelist_error: "Es können nur mp3 Audios geladen werden"

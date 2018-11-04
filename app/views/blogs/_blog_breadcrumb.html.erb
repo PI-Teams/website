@@ -1,0 +1,10 @@
+  <nav class="breadcrumb">
+    <%= link_to "Startseite", root_path, class: 'breadcrumb-item' %>
+    <%= link_to @blog.topic.title, topic_path(@blog.topic), class: 'breadcrumb-item' %>
+
+    <span class="breadcrumb-item active"><%= @blog.title %></span>
+
+    <span class="pull-right">
+      <%= render partial: 'blogs/admin_actions', locals: { blog: @blog } %>
+    </span>
+  </nav>

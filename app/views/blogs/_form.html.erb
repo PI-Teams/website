@@ -1,0 +1,59 @@
+<%= form_for(blog) do |f| %>
+  <% if blog.errors.any? %>
+    <% blog.errors.full_messages.each do |error| %>
+      <%= alert_generator error %>
+    <% end %>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :titel %>
+    <%= f.text_field :title, class: 'form-control', placeholder: "Titel" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :fünf_schlagworte_für_link_und_seo %>
+    <%= f.text_field :permalink, class: 'form-control', placeholder: "Permalink mit wenigen Schlagworten (Keywords)" %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :thema %>
+    <%= f.collection_select(:topic_id, Topic.all, :id, :title,
+                              {
+                                include_blank: true
+                              },
+                              class: 'form-control'
+                            )
+    %>
+  </div>
+
+  <div class="form-group">
+    <%= f.radio_button :status, 'draft' %>
+    <%= f.label :status, 'Entwurf' %>
+
+    <%= f.radio_button :status, 'published' %>
+    <%= f.label :status, 'Veröffentlicht' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :textfeld %>
+    <%= f.text_area :body, class: 'form-control', rows: 15, placeholder: "Kommentar" %>
+  </div>
+
+  <div class="form-group">
+   <label class="btn btn-primary">
+   Upload Audio (mp3)
+   <%= f.file_field :audio, style: 'display:none;' %>
+   </label>
+   <label class="btn btn-primary">
+   Upload Foto(s)
+   <%= f.file_field :images, multiple: true, style: 'display:none;' %>
+   </label>
+  </div>
+
+  <%= render 'display_images' %>
+
+  <div class="form-group">
+    <%= f.submit "Speichern", class: 'btn btn-primary' %>
+  </div>
+<% end %>

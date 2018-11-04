@@ -1,0 +1,14 @@
+<div class="blog-header">
+  <div class="container">
+    <h1 class="blog-title">Zwischengedanken</h1>
+    <p class="lead blog-description">Eindrücke von unseren Reisen und vom zuhause bleiben</p>
+    <span>
+      <%= link_to 'Blog schreiben /', new_blog_path if logged_in?(:site_admin) %>
+    </span>
+    <span>
+      <%= link_to "Themen", topics_path %>
+    </span>
+
+    
+  </div>
+</div>

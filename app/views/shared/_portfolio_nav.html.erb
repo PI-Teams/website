@@ -1,0 +1,26 @@
+<div class="collapse bg-inverse" id="navbarHeader">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 py-4">
+        <h4 class="text-white">Über uns</h4>
+        <p class="text-muted">Wir sind kein Journalisten Büro sondern ein Netzwerk freier Radioautorinnen, die auf internationale Berichterstattung spezialisiert sind. Natürlich können wir aber auch Filme machen oder online Berichte und Zeitungsartikel schreiben. Mit oder ohne Fotos. Sprechen Sie uns einfach an.</p>
+      </div>
+      <div class="col-sm-4 py-4">
+        <h4 class="text-white">Zum Ansehen</h4>
+        <ul class="list-unstyled">
+          <%= nav_helper 'text-white', 'li' %>
+          <li><%= login_helper 'text-white' %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="navbar navbar-inverse bg-inverse">
+  <div class="container d-flex justify-content-between">
+    <%= link_to "IC-MN", root_path, class: 'navbar-brand' %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</div>

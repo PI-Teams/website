@@ -1,0 +1,23 @@
+<div class="blog-post blog-body">
+  <h2 class="blog-post-title"><%= link_to blog.title, blog %></h2> 
+  <p class="blog-post-meta">Veröffentlicht <%= distance_of_time_in_words(blog.created_at, Time.now) %> | <%= blog.user.name %> </p>
+
+  <nav class="breadcrumb">
+    <%= render partial: 'blogs/admin_actions', locals: { blog: blog } %> 
+  </nav>
+
+  <% if  blog.audio.present? %>
+    <audio controls>
+    <source src="<%= blog.audio.url %>" type="audio/mpeg">Audio 2</audio><br>
+
+  <% end %>
+
+
+  <p> 
+  <% if blog.images.present? %>
+  <%= image_tag blog.images[0].url(:large).to_s, class: "img-fluid" %>
+  <% end %>
+    <%= truncate(markdown(blog.body), length: 600, escape: false) %> 
+    <%= link_to "Weiterlesen", blog %> 
+  </p>
+</div>

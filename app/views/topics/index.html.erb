@@ -1,0 +1,14 @@
+<div class="col-sm-8 blog-main">
+
+  <h1>Themen</h1>
+  
+  <div class='topic-index row'>
+    <%= render @topics %>
+  </div>
+
+  <hr>
+
+  <div class='btn btn-secondary'>
+    <%= link_to "Neues Thema", new_topic_path %>
+  </div>
+</div>

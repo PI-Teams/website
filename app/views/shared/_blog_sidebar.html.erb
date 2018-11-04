@@ -1,0 +1,34 @@
+<div class="col-sm-3 offset-sm-1 blog-sidebar">
+  <div class="sidebar-module sidebar-module-inset">
+    <h4>Über uns</h4>
+    <p>
+      Journalismus ist für uns eine Leidenschaft. Wir sind aber auch sonst sehr aktiv.
+    </p>
+    <p>
+      Mit der Bigent gUG haben wir ein Sozialunternehmen gegründet, das Bildung, Gesundheit und Entwicklung fördert. <a href='https://www.bigent.org'>www.bigent.org</a>
+    </p>
+    <p> 
+      Ausserdem haben wir eine Suchmaschine gebaut, die ihre  Gewinne in soziale Projekte investiert. Sie können uns helfen, indem Sie mit <a href='https://www.many4one.org'>many4one.org</a> suchen. Wir spenden!
+    </p>
+  </div>
+
+  <%= source_helper("alert alert-info blog-sidebar-source") %>
+
+  <div class="sidebar-module">
+    <h4>Themen</h4>
+    <% if @side_bar_topics.present? %>
+      <% @side_bar_topics.each do |topic| %>
+        <p><%= link_to topic.title, topic_path(topic) %></p>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="sidebar-module">
+    <h4>Wo wir sonst noch sind</h4>
+    <ol class="list-unstyled social-links">
+      <li><a href="https://www.linkedin.com/in/jutta-schwengsbier-a0281714/"><%= fa_icon "linkedin" %></a></li>
+      <li><a href="https://www.facebook.com/search/top/?q=mirko%20schwanitz"><%= fa_icon "facebook-f" %></a></li>
+      
+    </ol>
+  </div>
+</div>

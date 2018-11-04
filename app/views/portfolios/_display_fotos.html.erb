@@ -1,0 +1,12 @@
+<div>
+  <% if @portfolio_item.main_image? %>
+  <label>Hauptbild:</label>
+  <%= image_tag @portfolio_item.main_image, height: '80px' %> 
+  <% end %>
+
+  <% if @portfolio_item.thumb_image? %>
+
+  <label>Platzhalter:</label>
+  <%= image_tag @portfolio_item.thumb_image, height: '80px' %>
+  <% end %>
+</div>

@@ -1,0 +1,21 @@
+<div class="album text-muted">
+  <div class="container-fluid">
+    <%= source_helper("alert alert-warning") %>
+
+    <div class="row"> 
+
+    <% if logged_in?(:site_admin) %>
+        <div class="col-12">
+          <%= link_to "Neues Team Mitglied anlegen", new_portfolio_path, class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    
+    </div>
+
+    <hr>
+
+    <div class="row <%= "sortable" if logged_in?(:site_admin) %>">
+      <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+    </div>
+  </div>
+</div>
